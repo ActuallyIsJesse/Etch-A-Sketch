@@ -34,21 +34,30 @@ header {
     align-items: center;
 }
 
-.grid-row, .grid-item {
-    height: 36px;
-    margin: 0px;
-    padding: 0px;
+#grid-wrapper {
+    width: 768px;
     border: solid 1px;
     border-color: #f0f0f0;
 }
 
+.grid-row, .grid-item {
+    margin: 0px;
+    padding: 0px;
+    border-color: #f0f0f0;
+    border-width: 1px;
+}
+
 .grid-row {
     display: flex;
-    justify-content: flex-start;}
-
+    justify-content: flex-start;
+    align-items: stretch;
+    border-style: solid none solid none;
+    
+}
+    
 .grid-item {
-    width: 36px;
     background-color: #f9f9f9;
+    border-style: none solid none solid;
 }
 
 footer {
@@ -56,5 +65,4 @@ footer {
     color: #a2a2a2;
     text-align: center;
     padding: 8px;
-
 }
