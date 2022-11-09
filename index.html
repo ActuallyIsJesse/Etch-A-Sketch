@@ -17,8 +17,26 @@
             <h1>Etch-A-Sketch</h1>
         </header>
         <div id="subheader">
-            <div id="color-select"></div>
-            <div id="grid-select"></div>
+            <div id="color-select-wrapper">
+                <label>Color: </label>
+                <select id="color-select">
+                <datalist id="colors">
+                    <option value="Black">Black</option>
+                    <option value="Random">Random</option>
+                    <option value="Fade">Fade</option>
+                </datalist>
+                </select>
+            </div>
+            <div id="grid-select-wrapper">
+                <label>Grid size:</label>
+                <select id="grid-select">
+                <datalist id="grid-size">
+                    <option value="16">16&times;16</option>
+                    <option value="32">32&times;32</option>
+                    <option value="64">64&times;64</option>
+                </datalist>
+                </select>
+            </div>
         </div>
     </div>
     <div id="main-content">

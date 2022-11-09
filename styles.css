@@ -21,11 +21,17 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 24px;
     padding: 12px;
     background-color: #f5f5f5;
     color: #909090;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     font-weight: 300;
+}
+
+select {
+    padding: 0px 8px;
+    color: #909090;
 }
 
 #main-content {
@@ -43,26 +49,23 @@ header {
 .grid-row, .grid-item {
     margin: 0px;
     padding: 0px;
-    border-color: #f0f0f0;
-    border-width: 1px;
 }
 
 .grid-row {
     display: flex;
     justify-content: flex-start;
-    align-items: stretch;
-    border-style: solid none solid none;
-    
+    align-items: stretch;    
 }
     
 .grid-item {
     background-color: #f9f9f9;
-    border-style: none solid none solid;
+    border: solid 1px;
+    border-color: #f0f0f0;
 }
 
 footer {
     background: #ececec;
     color: #a2a2a2;
     text-align: center;
-    padding: 8px;
+    padding: 12px;
 }
