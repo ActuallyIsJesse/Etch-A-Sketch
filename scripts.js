@@ -29,34 +29,35 @@ function drawGrid(gridSize) {
         let gridRow = document.createElement(`div`);
         gridRow.classList.add('grid-row');
         gridWrapper.appendChild(gridRow);
-        gridRow.style.height = `${((768 / gridSize) - 2) + "px"}`; // Determine how high each row should be and subtract border height
         for (let j = 0; j < gridSize; j++) { // Draw Columns
             let gridCol = document.createElement(`div`);
-            gridCol.setAttribute('id', `${i}, ${j}`);
-            gridCol.style.width = `${(768 / gridSize) + "px"}`; // Determine how wide each box should be based on grid size
-            gridCol.addEventListener('mouseover', function (e) {
-                selectedColor = colorPicker.value;
-                switch (selectedColor) {
-                    case "Black":
-                        selectedColor = "#404040"
-                        break;
-                    case "Random":
-                        selectedColor = randomColor()
-                        break;
-                    case "Fade":
-                        let currentColor = window.getComputedStyle(gridCol);
-                        currentColor = (currentColor.getPropertyValue('background-color'));
-                        selectedColor = fadeRGB(currentColor);
-                        break;
-                }
-                e.target.style.backgroundColor = `${selectedColor}`;
-                e.target.style.borderColor = `${selectedColor}`;
-            });
+            colorSquare(gridCol);
             gridCol.classList.add('grid-item');
             gridRow.appendChild(gridCol);
         }
     }
     const gridCells = document.querySelector('#grid')
+}
+
+function colorSquare(gridCol) {
+    gridCol.addEventListener('mouseover', function (e) {
+        selectedColor = colorPicker.value;
+        switch (selectedColor) {
+            case "Black":
+                selectedColor = "#404040";
+                break;
+            case "Random":
+                selectedColor = randomColor();
+                break;
+            case "Fade":
+                let currentColor = window.getComputedStyle(gridCol);
+                currentColor = (currentColor.getPropertyValue('background-color'));
+                selectedColor = fadeRGB(currentColor);
+                break;
+        }
+        e.target.style.backgroundColor = `${selectedColor}`;
+        e.target.style.borderColor = `${selectedColor}`;
+    });
 }
 
 drawGrid(gridPicker.value);

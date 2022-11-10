@@ -42,6 +42,9 @@ select {
 
 #grid-wrapper {
     width: 768px;
+    height: 768px;
+    display: flex;
+    flex-direction: column;
     border: solid 1px;
     border-color: #f0f0f0;
 }
@@ -49,6 +52,7 @@ select {
 .grid-row, .grid-item {
     margin: 0px;
     padding: 0px;
+    flex: 1;
 }
 
 .grid-row {
