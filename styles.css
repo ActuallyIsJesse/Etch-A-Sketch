@@ -29,8 +29,12 @@ header {
     font-weight: 300;
 }
 
-select {
+select, #new-grid {
     padding: 3px 8px;
+    color: #909090;
+    background-color: #ffffff;
+    border: 1px solid #767676;
+    border-radius: 2px;
     color: #909090;
 }
 
@@ -43,10 +47,7 @@ select {
 #new-grid {
     padding: 4px 8px;
     margin: 0px 8px;
-    background-color: #ffffff;
-    border: 1px solid #767676;
-    border-radius: 2px;
-    color: #909090;
+    
 }
 
 #new-grid:active {
