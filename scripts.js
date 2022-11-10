@@ -2,6 +2,8 @@ let selectedColor = "#404040";
 const gridWrapper = document.querySelector('#grid-wrapper');
 const colorPicker = document.querySelector('#color-select');
 const gridPicker = document.querySelector('#grid-select');
+const newGridButton = document.querySelector('#new-grid');
+
 
 function randomColor() {
     let red = Math.floor(Math.random() * 255);
@@ -61,6 +63,6 @@ function colorSquare(gridCol) {
 }
 
 drawGrid(gridPicker.value);
-gridPicker.addEventListener('change', function (e) {
+newGridButton.addEventListener('click', function (e) {
     drawGrid(gridPicker.value);
 })

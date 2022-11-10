@@ -30,7 +30,7 @@ header {
 }
 
 select {
-    padding: 0px 8px;
+    padding: 3px 8px;
     color: #909090;
 }
 
@@ -40,13 +40,27 @@ select {
     align-items: center;
 }
 
+#new-grid {
+    padding: 4px 8px;
+    margin: 0px 8px;
+    background-color: #ffffff;
+    border: 1px solid #767676;
+    border-radius: 2px;
+    color: #909090;
+}
+
+#new-grid:active {
+    background-color: #909090;
+    color: #ffffff;
+
+}
+
 #grid-wrapper {
     width: 768px;
     height: 768px;
     display: flex;
     flex-direction: column;
-    border: solid 1px;
-    border-color: #f0f0f0;
+    border: solid 1px #f0f0f0;
 }
 
 .grid-row, .grid-item {
